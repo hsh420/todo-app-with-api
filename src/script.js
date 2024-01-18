@@ -1,6 +1,8 @@
 const addToDo = document.getElementById("add-todo-container");
+const addForm = document.getElementById("form-add");
 const list = document.getElementById("todos");
 const deleteContainer = document.getElementById("delete-todo-container");
+const deleteForm = document.getElementById("form-delete");
 const deleteAllBtn = document.getElementById("delete-all");
 const url = "http://localhost:4730/todos/";
 
@@ -84,6 +86,7 @@ addToDo.addEventListener("submit", (event) => {
   } else {
     alert("DU KANNST KEIN LEERES TO-DO HINZUFÜGEN, du Esel! :-)");
   }
+  addForm.reset();
 });
 
 list.addEventListener("change", (event) => {
@@ -116,6 +119,7 @@ deleteContainer.addEventListener("submit", (event) => {
     todos = todos.filter((todo) => todo.id !== id);
     renderToDos();
   }
+  deleteForm.reset();
 });
 
 deleteAllBtn.addEventListener("click", (event) => {

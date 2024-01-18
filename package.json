@@ -2,5 +2,9 @@
   "devDependencies": {
     "cypress": "^13.6.3",
     "serve": "^14.2.1"
+  },
+  "scripts": {
+    "serve": "serve ./src",
+    "e2e": "cypress open"
   }
 }
